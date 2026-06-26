@@ -27,6 +27,7 @@ import com.azxuniverse.azxnov.ui.viewmodel.ViewModelFactory
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Thread.setDefaultUncaughtExceptionHandler(CrashHandler(this))
         enableEdgeToEdge()
         setContent {
             AppTheme {
